@@ -65,16 +65,17 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function          format         argument */
-	{ netspeed_rx,       " ↘%s ",       "wlp2s0" },
-	{ netspeed_tx,       " ↗%s ",       "wlp2s0" },
+	{ netspeed_rx,       " ↘%s ",       "enp4s0" },
+	{ netspeed_tx,       " ↗%s ",       "enp4s0" },
 	{ cpu_perc,          "💻 %s%%, ",   NULL },
 	{ ram_used,          "%s/",         NULL },
 	{ ram_total,         "%s ",         NULL },
-	{ ipv4,              "🌐 %s@",      "wlp2s0" },
-	{ wifi_essid,        "%s ",         "wlp2s0" },
+  { run_command,       "⌨️ %s ",       "setxkbmap -print|grep symbols|cut -f2 -d'+'"},
+	{ ipv4,              "🌐 %s ",      "enp4s0" },
+	/*{ wifi_essid,        "%s ",         "enp4s0" },
 	{ run_command,       "🔈 %s ",      "amixer sget Master|grep Mono:|cut -f2 -d[|tr -d ]" },
 	{ run_command,       "💡 %s%% ",    "xbacklight -get | cut -f1 -d." },
 	{ battery_perc,      "🔋 %s%% ",    "BAT0" },
-	{ battery_remaining, "(%s) ",       "BAT0" },
+	{ battery_remaining, "(%s) ",       "BAT0" },*/
 	{ datetime,          "🗓 %s",       "%F %T"      },
 };
